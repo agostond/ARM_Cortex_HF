@@ -2,7 +2,181 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "Menu",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 320,
+            "Height": 240,
+            "RelativeFilename": "gameconsolebackground_resize.png",
+            "Alpha": 127
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 73,
+            "Y": 42,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_action.png",
+            "TextId": "__SingleUse_KWBU",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_action.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "GameSelector"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "GameSelector",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 320,
+            "Height": 240,
+            "RelativeFilename": "gameconsolebackground_resize.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 73,
+            "Y": 27,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_action.png",
+            "TextId": "__SingleUse_MIYY",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_action.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel2",
+            "X": 73,
+            "Y": 108,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_action.png",
+            "TextId": "__SingleUse_BUNL",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_action.json"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonWithIcon1",
+            "Y": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_tiny_fill_action.png",
+            "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_hardware_keyboard_backspace_50_50_E8F6FB.svg.png",
+            "IconX": 5,
+            "IconY": 5,
+            "IconHeight": 50,
+            "IconWidth": 50,
+            "Preset": "alternate_theme\\presets\\button\\icon\\round\\tiny_fill_action.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "FlappyBird"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "BananaCollector"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithIcon1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Menu"
+            }
+          },
+          {
+            "InteractionName": "FlappyBirdStart",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "FlappyBirdStart"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "FlappyBird",
         "Components": [
           {
             "Type": "Box",
@@ -10,9 +184,9 @@
             "Width": 320,
             "Height": 240,
             "Color": {
-              "Red": 60,
-              "Green": 219,
-              "Blue": 7
+              "Red": 9,
+              "Green": 196,
+              "Blue": 217
             }
           },
           {
@@ -31,8 +205,8 @@
             "Width": 50,
             "Height": 60,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
           },
           {
@@ -43,19 +217,19 @@
             "Width": 50,
             "Height": 94,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
           },
           {
             "Type": "Box",
             "Name": "box4",
-            "X": 193,
+            "X": 183,
             "Width": 50,
             "Height": 107,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
           },
           {
@@ -66,8 +240,8 @@
             "Width": 50,
             "Height": 60,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
           },
           {
@@ -77,8 +251,8 @@
             "Width": 50,
             "Height": 53,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
           },
           {
@@ -89,9 +263,33 @@
             "Width": 50,
             "Height": 120,
             "Color": {
-              "Red": 255,
-              "Green": 204
+              "Green": 145,
+              "Blue": 22
             }
+          },
+          {
+            "Type": "Box",
+            "Name": "box8",
+            "X": 37,
+            "Y": 240,
+            "Width": 25,
+            "Height": 38,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 12,
+            "Y": 2,
+            "Width": 13,
+            "Height": 24,
+            "TextId": "__SingleUse_TWFE",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": [
@@ -105,8 +303,151 @@
               "Type": "ActionCustom",
               "FunctionName": "TickGoes"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "FBGameOver"
+            }
           }
         ]
+      },
+      {
+        "Name": "FBGameOver",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 320,
+            "Height": 240,
+            "RelativeFilename": "game-over-flappy_resize.png",
+            "Alpha": 168
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonWithIcon1",
+            "X": 110,
+            "Y": 78,
+            "Width": 100,
+            "Height": 100,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_round_small_fill_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_round_small_fill_action.png",
+            "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_action_settings_backup_restore_50_50_E8F6FB.svg.png",
+            "IconX": 25,
+            "IconY": 25,
+            "IconHeight": 50,
+            "IconWidth": 50,
+            "Preset": "alternate_theme\\presets\\button\\icon\\round\\small_fill_action.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 210,
+            "Y": 190,
+            "Width": 110,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_tiny_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_tiny_round_action.png",
+            "TextId": "__SingleUse_F96X",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\tiny_round_action.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Score",
+            "Y": 146,
+            "Width": 86,
+            "Height": 24,
+            "TextId": "__SingleUse_Q28I",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 10,
+              "Green": 10,
+              "Blue": 10
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Y": 178,
+            "Width": 138,
+            "Height": 24,
+            "TextId": "__SingleUse_BA52",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 77,
+            "Y": 54,
+            "Width": 167,
+            "Height": 24,
+            "TextId": "__SingleUse_EXY8",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Menu"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithIcon1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "FlappyBird"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithIcon1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Replay"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "BananaCollector",
+        "Components": [],
+        "Interactions": []
       }
     ],
     "CustomContainerDefinitions": [],
@@ -116,7 +457,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Menu",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

@@ -9,11 +9,22 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/menu_screen/MenuView.hpp>
+#include <gui/menu_screen/MenuPresenter.hpp>
+#include <gui/gameselector_screen/GameSelectorView.hpp>
+#include <gui/gameselector_screen/GameSelectorPresenter.hpp>
+#include <gui/flappybird_screen/FlappyBirdView.hpp>
+#include <gui/flappybird_screen/FlappyBirdPresenter.hpp>
+#include <gui/fbgameover_screen/FBGameOverView.hpp>
+#include <gui/fbgameover_screen/FBGameOverPresenter.hpp>
+#include <gui/bananacollector_screen/BananaCollectorView.hpp>
+#include <gui/bananacollector_screen/BananaCollectorPresenter.hpp>
 
 
 /**
@@ -36,8 +47,12 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1View,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< MenuView,
+            touchgfx::meta::TypeList< GameSelectorView,
+            touchgfx::meta::TypeList< FlappyBirdView,
+            touchgfx::meta::TypeList< FBGameOverView,
+            touchgfx::meta::TypeList< BananaCollectorView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -49,8 +64,12 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1Presenter,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< MenuPresenter,
+            touchgfx::meta::TypeList< GameSelectorPresenter,
+            touchgfx::meta::TypeList< FlappyBirdPresenter,
+            touchgfx::meta::TypeList< FBGameOverPresenter,
+            touchgfx::meta::TypeList< BananaCollectorPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -63,7 +82,9 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::Nil
+            touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::TypeList< SlideTransition<EAST>,
+            touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**
@@ -73,7 +94,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotoMenuScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

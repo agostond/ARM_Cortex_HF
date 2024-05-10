@@ -3,6 +3,7 @@
 
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
+#include "flappyBirdObject.hpp"
 
 class Screen1View : public Screen1ViewBase
 {
@@ -34,9 +35,15 @@ private:
 	uint16_t culoumn3Begin = 295;
 	uint16_t culoumn3End = 345;
 
+	FlappyObject culomn1;
+	FlappyObject culomn2;
+	FlappyObject culomn3;
+
 	virtual void FlyBird();
 	virtual bool CheckCollision();
 	virtual void FinishGame();
+	virtual void GenerateMap();
+	virtual void DrawMap();
 
 public:
     Screen1View();

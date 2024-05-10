@@ -160,12 +160,6 @@
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>2895E9F1-2A13-B8C2-F23E-299451E3CFF8</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>CA298745-ED66-8273-C683-6EFC5AA1DF20</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>8C4D5999-9A41-8329-A502-2FD2ADE5E907</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\simulator\include">
       <UniqueIdentifier>6E645290-B209-4644-168B-B80FFF4B16CE</UniqueIdentifier>
     </Filter>
@@ -183,6 +177,66 @@
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>F5C519B3-A44D-C614-D8BE-20FA7F2172CE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\gameselector_screen">
+      <UniqueIdentifier>286E3111-16EB-FFCA-C4A3-823C8A044893</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\bananacollector_screen">
+      <UniqueIdentifier>370DA6CE-B6A6-BF96-FE95-13E3480E4320</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\gameselector_screen">
+      <UniqueIdentifier>AC89192D-4301-59A3-48D4-C730314EF25F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\bananacollector_screen">
+      <UniqueIdentifier>84C59165-AB8F-B7E6-E9F0-65D994978FE6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\menu_screen">
+      <UniqueIdentifier>9CADCEC4-473E-9470-8AC2-87694F2BAB79</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\menu_screen">
+      <UniqueIdentifier>E4338100-CE2A-2A15-E9CB-28C9418654CA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\flappybird_screen">
+      <UniqueIdentifier>23D927C1-32D1-D095-7EF3-1C271A7E062D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\flappybird_screen">
+      <UniqueIdentifier>41A72DC8-7681-D7EF-B9B6-F763D3C1221C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\gameselector_screen">
+      <UniqueIdentifier>9E76AA26-2927-FD6C-07B4-8FCB759CCB4D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\gameselector_screen">
+      <UniqueIdentifier>2C91CFB5-92B0-A9E5-4D7E-0532E4A19AD1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\bananacollector_screen">
+      <UniqueIdentifier>CB8EDFFA-2CA4-43CA-A442-A5433D7F0E23</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\flappybird_screen">
+      <UniqueIdentifier>21AD4D0F-3E27-FFCE-2A1E-DEF6079F74C8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\menu_screen">
+      <UniqueIdentifier>415A19C8-F6BE-2232-4A3E-39B9B602F44D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\bananacollector_screen">
+      <UniqueIdentifier>56EE8247-2167-0808-29AD-CF2792E2B503</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\flappybird_screen">
+      <UniqueIdentifier>5DE07DF9-B0F1-6100-2D7B-CA9B7653F1EE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\menu_screen">
+      <UniqueIdentifier>063663BB-77B5-1BB2-19C6-55C5A7398B00</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\fbgameover_screen">
+      <UniqueIdentifier>5580A5C9-BA98-2C1C-B869-46F5CB96DB65</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\fbgameover_screen">
+      <UniqueIdentifier>C6A563DD-5A44-3799-1C7D-DA7BB698664B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\fbgameover_screen">
+      <UniqueIdentifier>01858CFB-EA0E-954D-F63A-E2974ACB7F02</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\fbgameover_screen">
+      <UniqueIdentifier>BDDB3A5F-9B5D-B99F-4AD3-D6539F85DC31</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,17 +267,56 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
       <Filter>Source Files\gui\screen1_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\bananacollector_screen\BananaCollectorPresenter.cpp">
+      <Filter>Source Files\gui\bananacollector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\bananacollector_screen\BananaCollectorView.cpp">
+      <Filter>Source Files\gui\bananacollector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\bananacollector_screen\BananaCollectorViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\bananacollector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\flappybird_screen\FlappyBirdPresenter.cpp">
+      <Filter>Source Files\gui\flappybird_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\flappybird_screen\FlappyBirdView.cpp">
+      <Filter>Source Files\gui\flappybird_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\flappybird_screen\FlappyBirdViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\flappybird_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\gameselector_screen\GameSelectorPresenter.cpp">
+      <Filter>Source Files\gui\gameselector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\gameselector_screen\GameSelectorView.cpp">
+      <Filter>Source Files\gui\gameselector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\gameselector_screen\GameSelectorViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\gameselector_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menu_screen\MenuPresenter.cpp">
+      <Filter>Source Files\gui\menu_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menu_screen\MenuView.cpp">
+      <Filter>Source Files\gui\menu_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\menu_screen\MenuViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\menu_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\fbgameover_screen\FBGameOverPresenter.cpp">
+      <Filter>Source Files\gui\fbgameover_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\fbgameover_screen\FBGameOverView.cpp">
+      <Filter>Source Files\gui\fbgameover_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\fbgameover_screen\FBGameOverViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\fbgameover_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -661,20 +754,59 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
       <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\bananacollector_screen\BananaCollectorPresenter.hpp">
+      <Filter>Header Files\gui\bananacollector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\bananacollector_screen\BananaCollectorView.hpp">
+      <Filter>Header Files\gui\bananacollector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\bananacollector_screen\BananaCollectorViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\bananacollector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\flappybird_screen\FlappyBirdPresenter.hpp">
+      <Filter>Header Files\gui\flappybird_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\flappybird_screen\FlappyBirdView.hpp">
+      <Filter>Header Files\gui\flappybird_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\flappybird_screen\FlappyBirdViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\flappybird_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\gameselector_screen\GameSelectorPresenter.hpp">
+      <Filter>Header Files\gui\gameselector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\gameselector_screen\GameSelectorView.hpp">
+      <Filter>Header Files\gui\gameselector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\gameselector_screen\GameSelectorViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\gameselector_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menu_screen\MenuPresenter.hpp">
+      <Filter>Header Files\gui\menu_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menu_screen\MenuView.hpp">
+      <Filter>Header Files\gui\menu_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\menu_screen\MenuViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\menu_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\fbgameover_screen\FBGameOverPresenter.hpp">
+      <Filter>Header Files\gui\fbgameover_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\fbgameover_screen\FBGameOverView.hpp">
+      <Filter>Header Files\gui\fbgameover_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\fbgameover_screen\FBGameOverViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\fbgameover_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

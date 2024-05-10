@@ -1,3 +1,4 @@
+/*
 #include <gui/screen1_screen/Screen1View.hpp>
 #include <touchgfx/utils.hpp>
 #include <touchgfx/Color.hpp>
@@ -5,10 +6,42 @@
 #include "main.h"
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 
+#include "flappyBirdObject.hpp"
+
+void Screen1View::GenerateMap()
+{
+
+	culomn1.GenerateColumn(Culomn1);
+	culomn2.GenerateColumn(Culomn2);
+	culomn3.GenerateColumn(Culomn3);
+
+}
+
+void Screen1View::DrawMap()
+{
+	box2.setPosition(culomn1.GetBegin(), 0, 50, culomn1.GetTop());
+	box3.setPosition(culomn1.GetBegin(), culomn1.GetBot(), 50, 240-culomn1.GetBot());
+
+	box2.invalidate();
+	box3.invalidate();
+
+	box4.setPosition(culomn2.GetBegin(), 0, 50, culomn2.GetTop());
+	box5.setPosition(culomn2.GetBegin(), culomn2.GetBot(), 50, 240-culomn2.GetBot());
+
+	box4.invalidate();
+	box5.invalidate();
+
+	box6.setPosition(culomn3.GetBegin(), 0, 50, culomn3.GetTop());
+	box7.setPosition(culomn3.GetBegin(), culomn3.GetBot(), 50, 240-culomn3.GetBot());
+
+	box6.invalidate();
+	box7.invalidate();
+}
 
 Screen1View::Screen1View()
 {
-
+	GenerateMap();
+	DrawMap();
 }
 
 void Screen1View::setupScreen()
@@ -27,6 +60,8 @@ void Screen1View::FlyBird()
 	positionX++;
 	if (positionX > 295)
 	{
+		GenerateMap();
+		DrawMap();
 		positionX = -25;
 	}
 
@@ -66,25 +101,25 @@ void Screen1View::FlyBird()
 
 bool Screen1View::CheckCollision()
 {
-	if (positionX + 45 > culoumn1Begin && positionX + 20 < culoumn1End)
+	if (positionX + 47 > culomn1.GetBegin() && positionX + 20 < culomn1.GetEnd())
 	{
-		if (positionY + 15 <  culoumn1Top || positionY + 37 > culoumn1Bot)
+		if (positionY + 15 <  culomn1.GetTop() || positionY + 37 > culomn1.GetBot())
 		{
 			return true;
 		}
 	}
 
-	if (positionX + 45 > culoumn2Begin && positionX + 20 < culoumn2End)
+	if (positionX + 47 > culomn2.GetBegin() && positionX + 20 < culomn2.GetEnd())
 	{
-		if (positionY + 15 <  culoumn2Top || positionY + 37 > culoumn2Bot)
+		if (positionY + 15 <  culomn2.GetTop() || positionY + 37 > culomn2.GetBot())
 		{
 			return true;
 		}
 	}
 
-	if (positionX + 40 > culoumn3Begin && positionX + 20 < culoumn3End)
+	if (positionX + 47 > culomn3.GetBegin() && positionX + 20 < culomn3.GetEnd())
 	{
-		if (positionY + 15 <  culoumn3Top || positionY + 37 > culoumn3Bot)
+		if (positionY + 15 <  culomn3.GetTop() || positionY + 37 > culomn3.GetBot())
 		{
 			return true;
 		}
@@ -121,3 +156,5 @@ void Screen1View::TickGoes()
 		__background.invalidate();
 	}
 }
+
+*/

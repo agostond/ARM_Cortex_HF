@@ -91,7 +91,7 @@ const osThreadAttr_t GUI_Task_attributes = {
 /* USER CODE BEGIN PV */
 
 uint32_t btnPressed = 0;
-
+uint32_t seed = 0; // Seed value (initialize with a random source)
 
 /* USER CODE END PV */
 
@@ -152,6 +152,14 @@ void HAL_GPIO_EXTI_Callback( uint16_t GPIO_Pin)
 	}
 }
 
+uint32_t LCG_A = 1103515245;
+uint32_t LCG_C = 12345;
+
+uint32_t get_random_number() {
+	seed = (LCG_A * seed + LCG_C) % 0x7FFFFFFF; // Generate next random number
+	return seed;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -190,6 +198,7 @@ int main(void)
   MX_LTDC_Init();
   MX_DMA2D_Init();
   MX_TouchGFX_Init();
+  seed = HAL_GetTick();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */

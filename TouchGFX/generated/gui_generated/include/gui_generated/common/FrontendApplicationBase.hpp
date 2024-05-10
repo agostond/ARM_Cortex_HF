@@ -17,19 +17,47 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoScreen1ScreenNoTransition();
+        gotoMenuScreenNoTransition();
     }
 
-    // Screen1
-    void gotoScreen1ScreenNoTransition();
+    // Menu
+    void gotoMenuScreenNoTransition();
+
+    void gotoMenuScreenSlideTransitionEast();
+
+    // GameSelector
+    void gotoGameSelectorScreenWipeTransitionEast();
+
+    // FlappyBird
+    void gotoFlappyBirdScreenNoTransition();
+
+    // FBGameOver
+    void gotoFBGameOverScreenNoTransition();
+
+    // BananaCollector
+    void gotoBananaCollectorScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // Screen1
-    void gotoScreen1ScreenNoTransitionImpl();
+    // Menu
+    void gotoMenuScreenNoTransitionImpl();
+
+    void gotoMenuScreenSlideTransitionEastImpl();
+
+    // GameSelector
+    void gotoGameSelectorScreenWipeTransitionEastImpl();
+
+    // FlappyBird
+    void gotoFlappyBirdScreenNoTransitionImpl();
+
+    // FBGameOver
+    void gotoFBGameOverScreenNoTransitionImpl();
+
+    // BananaCollector
+    void gotoBananaCollectorScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

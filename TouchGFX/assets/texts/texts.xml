@@ -5,6 +5,32 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_EXY8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New High Score!</Translation>
+      </Text>
+      <Text Id="__SingleUse_BA52" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">High Score: 0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q28I" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Score: 0</Translation>
+      </Text>
+      <Text Id="__SingleUse_TWFE" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_F96X" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_BUNL" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Banana Collector</Translation>
+      </Text>
+      <Text Id="__SingleUse_MIYY" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Flappy Bird</Translation>
+      </Text>
+      <Text Id="__SingleUse_KWBU" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">PLAY</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
