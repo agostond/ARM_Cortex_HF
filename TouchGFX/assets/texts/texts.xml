@@ -6,17 +6,32 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_522N" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_1LJW" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_QLUG" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_93A8" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_74XB" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">0</Translation>
+      </Text>
       <Text Id="__SingleUse_EXY8" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">New High Score!</Translation>
       </Text>
       <Text Id="__SingleUse_BA52" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">High Score: 0</Translation>
+        <Translation Language="GB">High Score:</Translation>
       </Text>
       <Text Id="__SingleUse_Q28I" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Score: 0</Translation>
+        <Translation Language="GB">Score:</Translation>
       </Text>
-      <Text Id="__SingleUse_TWFE" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">0</Translation>
+      <Text Id="Points" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_F96X" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Menu</Translation>
@@ -36,5 +51,6 @@
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

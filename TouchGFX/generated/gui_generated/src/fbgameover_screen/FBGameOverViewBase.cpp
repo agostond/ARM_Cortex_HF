@@ -17,7 +17,7 @@ FBGameOverViewBase::FBGameOverViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_GAME_OVER_FLAPPY_RESIZE_ID));
     add(image1);
 
-    buttonWithIcon1.setXY(110, 64);
+    buttonWithIcon1.setXY(110, 78);
     buttonWithIcon1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_SMALL_FILL_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_SMALL_FILL_PRESSED_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_SETTINGS_BACKUP_RESTORE_50_50_E8F6FB_SVG_ID), touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_50_50_E8F6FB_SVG_ID));
     buttonWithIcon1.setIconXY(25, 25);
     buttonWithIcon1.setAction(buttonCallback);
@@ -30,6 +30,40 @@ FBGameOverViewBase::FBGameOverViewBase() :
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
     add(buttonWithLabel1);
+
+    ScoreText.setXY(0, 146);
+    ScoreText.setColor(touchgfx::Color::getColorFromRGB(10, 10, 10));
+    ScoreText.setLinespacing(0);
+    ScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Q28I));
+    add(ScoreText);
+
+    HighScoreText.setXY(0, 178);
+    HighScoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    HighScoreText.setLinespacing(0);
+    HighScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BA52));
+    add(HighScoreText);
+
+    NewHighScoreText.setXY(77, 54);
+    NewHighScoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    NewHighScoreText.setLinespacing(0);
+    NewHighScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EXY8));
+    add(NewHighScoreText);
+
+    Score.setPosition(71, 146, 47, 24);
+    Score.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Score.setLinespacing(0);
+    Unicode::snprintf(ScoreBuffer, SCORE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_1LJW).getText());
+    Score.setWildcard(ScoreBuffer);
+    Score.setTypedText(touchgfx::TypedText(T___SINGLEUSE_93A8));
+    add(Score);
+
+    HighScore.setPosition(123, 178, 51, 24);
+    HighScore.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    HighScore.setLinespacing(0);
+    Unicode::snprintf(HighScoreBuffer, HIGHSCORE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_522N).getText());
+    HighScore.setWildcard(HighScoreBuffer);
+    HighScore.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QLUG));
+    add(HighScore);
 }
 
 FBGameOverViewBase::~FBGameOverViewBase()

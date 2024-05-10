@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdbool.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -77,6 +77,12 @@ uint32_t get_random_number(void);
 /* USER CODE BEGIN Private defines */
 extern uint32_t btnPressed;
 extern uint32_t seed;
+
+extern uint16_t highScoreFlappy;
+extern uint16_t scoreFlappy;
+
+extern bool newFlappyHighScore;
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

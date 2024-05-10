@@ -3,6 +3,18 @@
 
 FBGameOverView::FBGameOverView()
 {
+	Unicode::snprintf(ScoreBuffer, SCORE_SIZE, "%u", scoreFlappy);
+	Unicode::snprintf(HighScoreBuffer, HIGHSCORE_SIZE, "%u", highScoreFlappy);
+
+	if (newFlappyHighScore)
+	{
+		NewHighScoreText.setVisible(true);
+		newFlappyHighScore = false;
+	}
+	else
+	{
+		NewHighScoreText.setVisible(false);
+	}
 
 }
 

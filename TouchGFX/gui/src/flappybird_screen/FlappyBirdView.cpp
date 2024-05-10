@@ -5,6 +5,7 @@
 #include <gui/flappybird_screen/FlappyBirdView.hpp>
 #include <gui_generated/flappybird_screen/FlappyBirdViewBase.hpp>
 #include <gui/flappybird_screen/FlappyBirdPresenter.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 #include "flappyBirdObject.hpp"
 
@@ -42,6 +43,8 @@ FlappyBirdView::FlappyBirdView()
 {
 	GenerateMap();
 	DrawMap();
+	btnPressed = 0;
+	scoreFlappy = 0;
 }
 
 void FlappyBirdView::setupScreen()
@@ -62,6 +65,14 @@ void FlappyBirdView::FlyBird()
 	{
 		GenerateMap();
 		DrawMap();
+
+		checkPoint = 0;
+
+		scoreFlappy++;
+
+		Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%u", scoreFlappy);
+		textArea1.invalidate();
+
 		positionX = -25;
 	}
 
@@ -135,16 +146,47 @@ void FlappyBirdView::FinishGame()
 	application().gotoFBGameOverScreenNoTransition();
 }
 
+void FlappyBirdView::CalcPoint()
+{
+	if (positionX > culomn1.GetEnd() && checkPoint == 0)
+	{
+		checkPoint = 1;
+		scoreFlappy++;
+
+		Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%u", scoreFlappy);
+		textArea1.invalidate();
+
+	}
+	else if (positionX > culomn2.GetEnd() && checkPoint == 1)
+	{
+		checkPoint = 2;
+		scoreFlappy++;
+
+		Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%u", scoreFlappy);
+		textArea1.invalidate();
+	}
+
+	if (scoreFlappy > highScoreFlappy)
+	{
+		highScoreFlappy = scoreFlappy;
+		newFlappyHighScore = true;
+	}
+}
+
 
 void FlappyBirdView::TickGoes()
 {
-	if(finished == false)
+	if (finished == false && btnPressed != 0)
 	{
 		FlyBird();
+
 		if(CheckCollision())
 		{
 			FinishGame();
 		}
+
+		CalcPoint();
+
 		__background.invalidate();
 	}
 }

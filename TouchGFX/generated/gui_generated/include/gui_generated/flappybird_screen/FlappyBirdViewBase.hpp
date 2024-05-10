@@ -9,6 +9,7 @@
 #include <gui/flappybird_screen/FlappyBirdPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class FlappyBirdViewBase : public touchgfx::View<FlappyBirdPresenter>
 {
@@ -44,7 +45,13 @@ protected:
     touchgfx::Box box5;
     touchgfx::Box box6;
     touchgfx::Box box7;
-    touchgfx::Box box8;
+    touchgfx::TextAreaWithOneWildcard textArea1;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA1_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
 
 private:
 

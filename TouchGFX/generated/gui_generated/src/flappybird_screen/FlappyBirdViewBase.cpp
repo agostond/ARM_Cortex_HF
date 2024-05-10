@@ -4,6 +4,7 @@
 #include <gui_generated/flappybird_screen/FlappyBirdViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 FlappyBirdViewBase::FlappyBirdViewBase()
 {
@@ -43,9 +44,13 @@ FlappyBirdViewBase::FlappyBirdViewBase()
     box7.setColor(touchgfx::Color::getColorFromRGB(0, 145, 22));
     add(box7);
 
-    box8.setPosition(37, 240, 25, 38);
-    box8.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(box8);
+    textArea1.setPosition(12, 4, 49, 26);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_74XB).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.setTypedText(touchgfx::TypedText(T_POINTS));
+    add(textArea1);
 }
 
 FlappyBirdViewBase::~FlappyBirdViewBase()

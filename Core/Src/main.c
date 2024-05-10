@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Components/ili9341/ili9341.h"
+#include "stdbool.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,6 +93,9 @@ const osThreadAttr_t GUI_Task_attributes = {
 
 uint32_t btnPressed = 0;
 uint32_t seed = 0; // Seed value (initialize with a random source)
+uint16_t highScoreFlappy = 0;
+uint16_t scoreFlappy = 0;
+bool newFlappyHighScore = false;
 
 /* USER CODE END PV */
 

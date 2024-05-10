@@ -11,6 +11,8 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class FBGameOverViewBase : public touchgfx::View<FBGameOverPresenter>
 {
@@ -39,6 +41,19 @@ protected:
     touchgfx::Image image1;
     touchgfx::ButtonWithIcon buttonWithIcon1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::TextArea ScoreText;
+    touchgfx::TextArea HighScoreText;
+    touchgfx::TextArea NewHighScoreText;
+    touchgfx::TextAreaWithOneWildcard Score;
+    touchgfx::TextAreaWithOneWildcard HighScore;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SCORE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar ScoreBuffer[SCORE_SIZE];
+    static const uint16_t HIGHSCORE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar HighScoreBuffer[HIGHSCORE_SIZE];
 
 private:
 

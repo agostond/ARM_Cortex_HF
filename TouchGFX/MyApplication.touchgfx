@@ -268,28 +268,19 @@
             }
           },
           {
-            "Type": "Box",
-            "Name": "box8",
-            "X": 37,
-            "Y": 240,
-            "Width": 25,
-            "Height": 38,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea1",
             "X": 12,
-            "Y": 2,
-            "Width": 13,
-            "Height": 24,
-            "TextId": "__SingleUse_TWFE",
+            "Y": 4,
+            "Width": 49,
+            "Height": 26,
+            "TextId": "Points",
             "TextRotation": "0",
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_74XB",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           }
         ],
         "Interactions": [
@@ -325,8 +316,7 @@
             "Name": "image1",
             "Width": 320,
             "Height": 240,
-            "RelativeFilename": "game-over-flappy_resize.png",
-            "Alpha": 168
+            "RelativeFilename": "game-over-flappy_resize.png"
           },
           {
             "Type": "ButtonWithIcon",
@@ -370,9 +360,9 @@
           },
           {
             "Type": "TextArea",
-            "Name": "Score",
+            "Name": "ScoreText",
             "Y": 146,
-            "Width": 86,
+            "Width": 66,
             "Height": 24,
             "TextId": "__SingleUse_Q28I",
             "TextRotation": "0",
@@ -385,9 +375,9 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1",
+            "Name": "HighScoreText",
             "Y": 178,
-            "Width": 138,
+            "Width": 118,
             "Height": 24,
             "TextId": "__SingleUse_BA52",
             "TextRotation": "0",
@@ -395,7 +385,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea2",
+            "Name": "NewHighScoreText",
             "X": 77,
             "Y": 54,
             "Width": 167,
@@ -403,6 +393,36 @@
             "TextId": "__SingleUse_EXY8",
             "TextRotation": "0",
             "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Score",
+            "X": 71,
+            "Y": 146,
+            "Width": 47,
+            "Height": 24,
+            "TextId": "__SingleUse_93A8",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_1LJW",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "HighScore",
+            "X": 123,
+            "Y": 178,
+            "Width": 51,
+            "Height": 24,
+            "TextId": "__SingleUse_QLUG",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_522N",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           }
         ],
         "Interactions": [

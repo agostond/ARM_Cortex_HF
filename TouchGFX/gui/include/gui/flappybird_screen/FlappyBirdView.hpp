@@ -17,23 +17,7 @@ private:
 	uint32_t prevBtnPressed = 0;
 	uint8_t timer = 0;
 
-	uint16_t culoumn1Bot = 146;
-	uint16_t culoumn1Top = 60;
-
-	uint16_t culoumn2Bot = 180;
-	uint16_t culoumn2Top = 107;
-
-	uint16_t culoumn3Bot = 120;
-	uint16_t culoumn3Top = 53;
-
-	uint16_t culoumn1Begin = 79;
-	uint16_t culoumn1End = 129;
-
-	uint16_t culoumn2Begin = 193;
-	uint16_t culoumn2End = 243;
-
-	uint16_t culoumn3Begin = 295;
-	uint16_t culoumn3End = 345;
+	uint8_t checkPoint = 0;
 
 	FlappyObject culomn1;
 	FlappyObject culomn2;
@@ -44,6 +28,7 @@ private:
 	virtual void FinishGame();
 	virtual void GenerateMap();
 	virtual void DrawMap();
+	virtual void CalcPoint();
 
 public:
     FlappyBirdView();
