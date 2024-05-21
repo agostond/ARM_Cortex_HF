@@ -16,6 +16,8 @@ private:
 	int16_t positionY = 95;
 	uint32_t prevBtnPressed = 0;
 	uint8_t timer = 0;
+	uint8_t deathTimer = 0;
+	bool firstPress = true;
 
 	uint8_t checkPoint = 0;
 

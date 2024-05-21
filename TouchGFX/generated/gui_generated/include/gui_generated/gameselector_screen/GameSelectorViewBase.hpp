@@ -26,6 +26,10 @@ public:
     {
         // Override and implement this function in GameSelector
     }
+    virtual void BananaStart()
+    {
+        // Override and implement this function in GameSelector
+    }
 
 protected:
     FrontendApplication& application() {

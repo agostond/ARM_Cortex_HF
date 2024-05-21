@@ -68,13 +68,17 @@ void GameSelectorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&
         //Interaction2
         //When buttonWithLabel2 clicked change screen to BananaCollector
         //Go to BananaCollector with no screen transition
-        application().gotoBananaCollectorScreenNoTransition();
+        application().gotoBananaCollectorScreenNoTransition();
+        //BananaStart
+        //When buttonWithLabel2 clicked call virtual function
+        //Call BananaStart
+        BananaStart();
     }
     if (&src == &buttonWithIcon1)
     {
         //Interaction3
         //When buttonWithIcon1 clicked change screen to Menu
-        //Go to Menu with no screen transition
-        application().gotoMenuScreenNoTransition();
+        //Go to Menu with screen transition towards West
+        application().gotoMenuScreenSlideTransitionWest();
     }
 }

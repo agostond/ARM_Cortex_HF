@@ -37,6 +37,9 @@
     <ClCompile Include="..\..\gui\src\fbgameover_screen\FBGameOverPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\fbgameover_screen\FBGameOverView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\fbgameover_screen\FBGameOverViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\bcgameover_screen\BCGameOverPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\bcgameover_screen\BCGameOverView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\bcgameover_screen\BCGameOverViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -203,6 +206,9 @@
     <ClInclude Include="..\..\gui\include\gui\fbgameover_screen\FBGameOverPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\fbgameover_screen\FBGameOverView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\fbgameover_screen\FBGameOverViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\bcgameover_screen\BCGameOverPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\bcgameover_screen\BCGameOverView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\bcgameover_screen\BCGameOverViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

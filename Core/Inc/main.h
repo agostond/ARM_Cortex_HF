@@ -80,8 +80,13 @@ extern uint32_t seed;
 
 extern uint16_t highScoreFlappy;
 extern uint16_t scoreFlappy;
-
 extern bool newFlappyHighScore;
+
+extern uint16_t highScoreBanana;
+extern uint16_t scoreBanana;
+extern bool newBananaHighScore;
+
+extern float gyroBuffer[3];
 
 /* USER CODE END Private defines */
 

@@ -25,6 +25,8 @@
 #include <gui/fbgameover_screen/FBGameOverPresenter.hpp>
 #include <gui/bananacollector_screen/BananaCollectorView.hpp>
 #include <gui/bananacollector_screen/BananaCollectorPresenter.hpp>
+#include <gui/bcgameover_screen/BCGameOverView.hpp>
+#include <gui/bcgameover_screen/BCGameOverPresenter.hpp>
 
 
 /**
@@ -52,7 +54,8 @@ public:
             touchgfx::meta::TypeList< FlappyBirdView,
             touchgfx::meta::TypeList< FBGameOverView,
             touchgfx::meta::TypeList< BananaCollectorView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< BCGameOverView,
+            touchgfx::meta::Nil > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -69,7 +72,8 @@ public:
             touchgfx::meta::TypeList< FlappyBirdPresenter,
             touchgfx::meta::TypeList< FBGameOverPresenter,
             touchgfx::meta::TypeList< BananaCollectorPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< BCGameOverPresenter,
+            touchgfx::meta::Nil > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -83,8 +87,9 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::TypeList< SlideTransition<WEST>,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::Nil > > >
             > GeneratedTransitionTypes;
 
     /**

@@ -24,6 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stm32f429i_discovery.h"
+#include "stm32f429i_discovery_gyroscope.h"
 #include "Components/ili9341/ili9341.h"
 #include "stdbool.h"
 /* USER CODE END Includes */
@@ -93,9 +95,16 @@ const osThreadAttr_t GUI_Task_attributes = {
 
 uint32_t btnPressed = 0;
 uint32_t seed = 0; // Seed value (initialize with a random source)
+
 uint16_t highScoreFlappy = 0;
 uint16_t scoreFlappy = 0;
 bool newFlappyHighScore = false;
+
+uint16_t highScoreBanana = 0;
+uint16_t scoreBanana = 0;
+bool newBananaHighScore = false;
+
+float gyroBuffer[3];
 
 /* USER CODE END PV */
 
@@ -202,10 +211,15 @@ int main(void)
   MX_LTDC_Init();
   MX_DMA2D_Init();
   MX_TouchGFX_Init();
-  seed = HAL_GetTick();
+
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
+
+  if (BSP_GYRO_Init() != GYRO_OK){
+	  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
+  }
+  seed = HAL_GetTick();
 
   /* USER CODE END 2 */
 
@@ -987,6 +1001,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	BSP_GYRO_GetXYZ(gyroBuffer);
     osDelay(100);
   }
   /* USER CODE END 5 */

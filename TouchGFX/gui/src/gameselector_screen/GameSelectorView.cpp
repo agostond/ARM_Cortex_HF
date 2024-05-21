@@ -21,3 +21,9 @@ void GameSelectorView::FlappyBirdStart()
 	seed = HAL_GetTick();
 
 }
+
+void GameSelectorView::BananaStart()
+{
+	seed = HAL_GetTick();
+
+}

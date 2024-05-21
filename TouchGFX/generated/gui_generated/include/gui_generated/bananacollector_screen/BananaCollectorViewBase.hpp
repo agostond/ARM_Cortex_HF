@@ -8,6 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/bananacollector_screen/BananaCollectorPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class BananaCollectorViewBase : public touchgfx::View<BananaCollectorPresenter>
 {
@@ -15,6 +17,16 @@ public:
     BananaCollectorViewBase();
     virtual ~BananaCollectorViewBase();
     virtual void setupScreen();
+    virtual void handleTickEvent();
+    virtual void handleKeyEvent(uint8_t key);
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void TickIncrement()
+    {
+        // Override and implement this function in BananaCollector
+    }
 
 protected:
     FrontendApplication& application() {
@@ -25,6 +37,19 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Box box1;
+    touchgfx::TextAreaWithOneWildcard textArea1;
+    touchgfx::Box box2;
+    touchgfx::Image image1_2;
+    touchgfx::Image image1_1;
+    touchgfx::Image image1;
+    touchgfx::Image image2;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
 
 private:
 

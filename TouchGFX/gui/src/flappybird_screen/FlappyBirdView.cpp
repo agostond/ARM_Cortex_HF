@@ -112,7 +112,7 @@ void FlappyBirdView::FlyBird()
 
 bool FlappyBirdView::CheckCollision()
 {
-	if (positionX + 47 > culomn1.GetBegin() && positionX + 20 < culomn1.GetEnd())
+	if (positionX + 40 > culomn1.GetBegin() && positionX + 20 < culomn1.GetEnd())
 	{
 		if (positionY + 15 <  culomn1.GetTop() || positionY + 37 > culomn1.GetBot())
 		{
@@ -120,7 +120,7 @@ bool FlappyBirdView::CheckCollision()
 		}
 	}
 
-	if (positionX + 47 > culomn2.GetBegin() && positionX + 20 < culomn2.GetEnd())
+	if (positionX + 40 > culomn2.GetBegin() && positionX + 20 < culomn2.GetEnd())
 	{
 		if (positionY + 15 <  culomn2.GetTop() || positionY + 37 > culomn2.GetBot())
 		{
@@ -128,7 +128,7 @@ bool FlappyBirdView::CheckCollision()
 		}
 	}
 
-	if (positionX + 47 > culomn3.GetBegin() && positionX + 20 < culomn3.GetEnd())
+	if (positionX + 40 > culomn3.GetBegin() && positionX + 20 < culomn3.GetEnd())
 	{
 		if (positionY + 15 <  culomn3.GetTop() || positionY + 37 > culomn3.GetBot())
 		{
@@ -178,14 +178,29 @@ void FlappyBirdView::TickGoes()
 {
 	if (finished == false && btnPressed != 0)
 	{
+		if(firstPress)
+		{
+			firstPress = false;
+			btnPressed = 1;
+			prevBtnPressed = 1;
+		}
 		FlyBird();
 
 		if(CheckCollision())
 		{
-			FinishGame();
+			deathTimer++;
 		}
 
 		CalcPoint();
+
+		if(deathTimer != 0)
+		{
+			deathTimer++;
+			if (deathTimer > 10)
+			{
+				FinishGame();
+			}
+		}
 
 		__background.invalidate();
 	}

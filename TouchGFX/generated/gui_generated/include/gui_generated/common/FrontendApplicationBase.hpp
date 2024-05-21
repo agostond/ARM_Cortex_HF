@@ -23,6 +23,8 @@ public:
     // Menu
     void gotoMenuScreenNoTransition();
 
+    void gotoMenuScreenSlideTransitionWest();
+
     void gotoMenuScreenSlideTransitionEast();
 
     // GameSelector
@@ -37,6 +39,9 @@ public:
     // BananaCollector
     void gotoBananaCollectorScreenNoTransition();
 
+    // BCGameOver
+    void gotoBCGameOverScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -44,6 +49,8 @@ protected:
 
     // Menu
     void gotoMenuScreenNoTransitionImpl();
+
+    void gotoMenuScreenSlideTransitionWestImpl();
 
     void gotoMenuScreenSlideTransitionEastImpl();
 
@@ -58,6 +65,9 @@ protected:
 
     // BananaCollector
     void gotoBananaCollectorScreenNoTransitionImpl();
+
+    // BCGameOver
+    void gotoBCGameOverScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

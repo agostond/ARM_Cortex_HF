@@ -238,6 +238,18 @@
     <Filter Include="Header Files\generated\gui_generated\fbgameover_screen">
       <UniqueIdentifier>BDDB3A5F-9B5D-B99F-4AD3-D6539F85DC31</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\bcgameover_screen">
+      <UniqueIdentifier>2048239C-1919-8AB6-393A-746022FE4637</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\bcgameover_screen">
+      <UniqueIdentifier>22C4904B-D40C-7CE1-F2BE-D1A16212B9EC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\bcgameover_screen">
+      <UniqueIdentifier>C6C4C009-8266-1A00-861D-199A1CCC0E57</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\bcgameover_screen">
+      <UniqueIdentifier>24CDC481-9AA7-23DA-C53C-AD60640C67DF</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -317,6 +329,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\fbgameover_screen\FBGameOverViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\fbgameover_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\bcgameover_screen\BCGameOverPresenter.cpp">
+      <Filter>Source Files\gui\bcgameover_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\bcgameover_screen\BCGameOverView.cpp">
+      <Filter>Source Files\gui\bcgameover_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\bcgameover_screen\BCGameOverViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\bcgameover_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -807,6 +828,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\fbgameover_screen\FBGameOverViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\fbgameover_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\bcgameover_screen\BCGameOverPresenter.hpp">
+      <Filter>Header Files\gui\bcgameover_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\bcgameover_screen\BCGameOverView.hpp">
+      <Filter>Header Files\gui\bcgameover_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\bcgameover_screen\BCGameOverViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\bcgameover_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

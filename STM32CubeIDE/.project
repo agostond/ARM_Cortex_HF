@@ -315,6 +315,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/bananacollector_screen/BananaCollectorView.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/BCGameOverPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/bcgameover_screen/BCGameOverPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/BCGameOverView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/bcgameover_screen/BCGameOverView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/FrontendApplication.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
@@ -450,6 +460,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/bananacollector_screen/BananaCollectorViewBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/BCGameOverViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/bcgameover_screen/BCGameOverViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
@@ -540,6 +555,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_icon_theme_images_hardware_keyboard_backspace_50_50_E8F6FB.svg.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_banan30x30.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_banan30x30.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_bananaGameover320x240.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bananaGameover320x240.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_flappy.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_flappy.cpp</locationURI>
@@ -558,6 +583,11 @@
 			<name>Application/User/generated/image_gameconsolebackground_resize.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_gameconsolebackground_resize.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_monkey50x50.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_monkey50x50.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

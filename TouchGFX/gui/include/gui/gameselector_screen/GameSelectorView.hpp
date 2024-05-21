@@ -8,6 +8,7 @@ class GameSelectorView : public GameSelectorViewBase
 {
 private:
 	virtual void FlappyBirdStart();
+	virtual void BananaStart();
 
 public:
     GameSelectorView();

@@ -19,6 +19,8 @@
 #include <gui/fbgameover_screen/FBGameOverPresenter.hpp>
 #include <gui/bananacollector_screen/BananaCollectorView.hpp>
 #include <gui/bananacollector_screen/BananaCollectorPresenter.hpp>
+#include <gui/bcgameover_screen/BCGameOverView.hpp>
+#include <gui/bcgameover_screen/BCGameOverPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -49,6 +51,17 @@ void FrontendApplicationBase::gotoMenuScreenNoTransition()
 void FrontendApplicationBase::gotoMenuScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<MenuView, MenuPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMenuScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMenuScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMenuScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<MenuView, MenuPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 void FrontendApplicationBase::gotoMenuScreenSlideTransitionEast()
@@ -112,4 +125,17 @@ void FrontendApplicationBase::gotoBananaCollectorScreenNoTransition()
 void FrontendApplicationBase::gotoBananaCollectorScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<BananaCollectorView, BananaCollectorPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// BCGameOver
+
+void FrontendApplicationBase::gotoBCGameOverScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoBCGameOverScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoBCGameOverScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<BCGameOverView, BCGameOverPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
